@@ -11,12 +11,19 @@ class UserController extends Controller
     /**
      * Get User details.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function getUser($id = null)
     {
-        // Get User details if id is not null
-        return User::find($id);
+        // Get User details
+        $userDetails = User::find($id);
+
+        // If isset(user Details), return details, else return error
+        if ($userDetails) {
+            return response()->json(['body' => $userDetails, "status" => 200]);
+        } else {
+            return response()->json(["error" => "No User matches the ID provided", "status" => 404]);
+        }
     }
     public function get()
     {
@@ -121,9 +128,13 @@ class UserController extends Controller
     {
         try {
             // Get user
-            $user = User::find($id['id']);
-            // Delete user 
-            $user->delete();
+            if (User::find($id['id']) != '') {
+                // Delete user 
+                $user = User::find($id['id']);
+                $user->delete();
+            } else {
+                return response()->json(['error' => "User not found", "code" => 404]);
+            }
         } catch (\Throwable $e) {
             // On Error: return Error message
             return response()->json(["error" => "Request could not be completed", "code" => 501, "msg" => $e]);

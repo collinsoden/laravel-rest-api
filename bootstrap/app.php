@@ -42,8 +42,7 @@ $app->singleton(
 );
 
 /*
-|--------------------------------------------------------------------------
-| Return The Application
+|Return The Application
 |--------------------------------------------------------------------------
 |
 | This script returns the application instance. The instance is given to
