@@ -104,6 +104,6 @@ Welcome to the Laravel App! This application is built using the Laravel framewor
 
 ## ✍️ Authors <a name = "authors"></a>
 
-- [@collinsoden22](https://github.com/collinsoden22) - Idea & Initial work
+- [@Collins Oden](https://github.com/collinsoden22) - Idea & Initial work
 
 See also the list of [contributors](https://github.com/collinsoden22/laravel-rest-api/contributors) who participated in this project.
