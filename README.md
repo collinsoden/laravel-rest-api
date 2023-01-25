@@ -106,4 +106,4 @@ Welcome to the Laravel App! This application is built using the Laravel framewor
 
 - [@collinsoden22](https://github.com/collinsoden22) - Idea & Initial work
 
-See also the list of [contributors](https://github.com/collinsoden22/The-Documentation-Compendium/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/collinsoden22/laravel-rest-api/contributors) who participated in this project.
