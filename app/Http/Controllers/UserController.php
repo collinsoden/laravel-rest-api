@@ -27,7 +27,7 @@ class UserController extends Controller
     }
     public function get()
     {
-        // Return errorMessage if no id is entered
+        // Return all users if no id is entered
         return User::all();
     }
     /**
