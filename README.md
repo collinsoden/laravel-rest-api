@@ -100,8 +100,7 @@ Welcome to the Laravel App! This application is built using the Laravel framewor
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-- [Laravel](https://www.laravel.com/) - Database
-- [PHP](https://php.org/) - Server Framework
+- [Laravel](https://www.laravel.com/) - Framework
 
 ## ✍️ Authors <a name = "authors"></a>
 
