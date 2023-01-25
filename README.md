@@ -23,76 +23,80 @@
 ## 📝 Table of Contents
 
 - [About](#about)
-- [Getting Started](#getting_started)
-- [Deployment](#deployment)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
 - [Usage](#usage)
+- [Testing](#testing)
 - [Built Using](#built_using)
-- [TODO](../TODO.md)
-- [Contributing](../CONTRIBUTING.md)
 - [Authors](#authors)
-- [Acknowledgments](#acknowledgement)
 
 ## 🧐 About <a name = "about"></a>
 
-This API helps user perform CRUD operation
+Welcome to the Laravel App! This application is built using the Laravel framework and is designed to provide a simple and easy to use interface for managing data.
 
-## 🏁 Getting Started <a name = "getting_started"></a>
+## Prerequisites <a name = "prerequisites"></a>
+- PHP >= 7.3
+- Composer
+- MySQL or any other database management system
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+## Installation <a name = "installation"></a>
+- Clone the repository: git clone https://github.com/collinsoden22/laravel-rest-api.git
 
-### Prerequisites
+- Navigate to the project directory: cd laravel-rest-api
 
-What things you need to install the software and how to install them.
+- Install the dependencies: composer install
 
-```
-Give examples
-```
+- Copy .env.example to .env and edit the database connection settings:
+  -   DB_CONNECTION=mysql
+  -   DB_HOST=127.0.0.1
+  -   DB_PORT=3306
+  -   DB_DATABASE=database_name 
+  -   DB_USERNAME=database_user
+  -   DB_PASSWORD=database_password
 
-### Installing
+- Run the migrations: php artisan migrate
 
-A step by step series of examples that tell you how to get a development env running.
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo.
-
-## 🔧 Running the tests <a name = "tests"></a>
-
-Explain how to run the automated tests for this system.
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
 
 ## 🎈 Usage <a name="usage"></a>
 
-Add notes about how to use the system.
+- Start the development server: php artisan serve
 
-## 🚀 Deployment <a name = "deployment"></a>
+- Access the application in your browser at http://localhost:8000/api/
 
-Add additional notes about how to deploy this on a live system.
+
+##  Testing <a name = "testing"></a>
+  - Request
+      Method: GET
+      Name:   Fetch Users
+      Desc:   This endpoint fetches all user data on the database.
+      url:    http://127.0.0.1:8000/api/user/
+
+  - Request
+      Method: POST
+      Name:   Create User
+      Desc:   This endpoint creates a new user.
+      url:    http://127.0.0.1:8000/api/create?name={Name}&email={Email}&password={Password}
+      Query Params: name: {name}, email: {email}, password: {password}
+
+  - Request
+      Method: GET
+      Name:   Fetch Users
+      Desc:   This endpoint fetches all user data on the database.
+      url:    http://127.0.0.1:8000/api/user/{id}
+
+  - Request
+      Method:       PUT
+      Name:         Update User
+      Desc:         This endpoint updates user data on the database.
+      url:          http://127.0.0.1:8000/api/update?name={name}&email={email}&id={id}
+      Query Params: name={Name}, email={email},id={id}
+
+  - Request
+      Method:       DELETE
+      Name:         Delete User
+      Desc:         This endpoint deletes user from the database.
+      url:          http://127.0.0.1:8000/api/delete?id={id}
+      Query Params: id={id}
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
@@ -101,12 +105,6 @@ Add additional notes about how to deploy this on a live system.
 
 ## ✍️ Authors <a name = "authors"></a>
 
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
+- [@collinsoden22](https://github.com/collinsoden22) - Idea & Initial work
 
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
-
-## 🎉 Acknowledgements <a name = "acknowledgement"></a>
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- References
+See also the list of [contributors](https://github.com/collinsoden22/The-Documentation-Compendium/contributors) who participated in this project.
